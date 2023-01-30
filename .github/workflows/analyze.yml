@@ -20,7 +20,10 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt update
-          sudo apt install ninja-build sqlite3 libsqlite3-dev
+          sudo apt install ninja-build \
+                           sqlite3 \
+                           libsqlite3-dev \
+                           catch2
       - name: Generate build files
         run: |
           mkdir build && cd build
